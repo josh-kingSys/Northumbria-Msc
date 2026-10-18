@@ -24,3 +24,9 @@ for name in staff_list:
 
 print(count)
 
+#A table should show a rundown of how many times employees have changed their password
+table = pd.DataFrame(
+    list(count.items()), columns=["Staff", "No. of password changes"]
+)
+
+print(table)
