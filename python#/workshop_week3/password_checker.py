@@ -14,3 +14,13 @@ staff_list = (sorted_df[0] + " " + sorted_df[1]).tolist()
 dropdown = select(label="Members of staff", options=staff_list)
 print(dropdown)
 
+#Clicking on a member of staff should add one to the count of whether they have updated their password or not
+count = {}
+for name in staff_list:
+    i=0
+    if dropdown == name:
+        i+=1
+        count[name] = i
+
+print(count)
+
