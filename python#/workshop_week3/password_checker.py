@@ -10,5 +10,7 @@ df = pd.read_csv("employees.csv", header=None)
 sorted_df = df.sort_values(by=df.columns[0])
 
 #The app should use a drop-down menu to select members of staff
-select(label="Members of staff", options=sorted_df[1:])
+staff_list = (sorted_df[0] + " " + sorted_df[1]).tolist()
+dropdown = select(label="Members of staff", options=staff_list)
+print(dropdown)
 
